@@ -38,6 +38,7 @@
 .logo-container{
     padding: 10px;
     display: flex;
+    width:100px;
 }
 .sitename{
     font-size: larger;

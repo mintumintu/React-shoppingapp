@@ -3,13 +3,15 @@ import './Header.css'
 // import StorefrontIcon from '@mui/icons-material/Storefront';
 // import SearchIcon from '@mui/icons-material/Search';
 import {MdOutlineStorefront,MdSearch, MdShoppingCart} from 'react-icons/md'
+import { Link } from 'react-router-dom'
 
 const Header = ()=>{
     return (
        <div className='header'>
         <div className='logo-container'>
+        <Link to='/' style={{display:'flex'}}>
         <MdOutlineStorefront size={40} className='site-logo' color='orange'/>
-        <p className='sitename'>Eshop</p>
+        <p className='sitename' style={{textDecoration:'none',color:'white'}}>Eshop</p></Link>
         </div>
         <div className='search-container'>
             <input type='text' className='searchbar'/>
@@ -24,8 +26,10 @@ const Header = ()=>{
             <p>Shop</p>
         </div>
         <div className='cart-container'>
-            <p>Your Cart</p>
-        <MdShoppingCart size={25} color='white' /><span>0</span>
+        <Link to='/cart'>
+            <p style={{textDecoration:'none',color:'white'}}>Your Cart</p>
+        <MdShoppingCart size={25} color='white' /><span style={{textDecoration:'none',color:'white'}}>0</span>
+        </Link>
         </div>
        </div>
     );
