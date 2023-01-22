@@ -1,13 +1,20 @@
 import React from "react";
+import Product from './Product'
+import './Cart.css'
 
 const Cart = ()=>{
     return(
         <div className="cart-body">
             <div className="left-section">
+            <p>Your Shopping Cart</p>
+            <Product />
+            <Product />
             </div>
             <div className="right-section">
-            <div className="summery">
-                <p>Total Items</p>
+            <div className="subtotal">
+             <p>Your total is 500</p>
+             <p><input type='checkbox' />This item contains a gift</p>
+             <button>Checkout</button>
             </div>
             </div>
         </div>
