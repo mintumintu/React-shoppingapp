@@ -1,0 +1,51 @@
+*{
+    margin:0;
+    padding:0;
+}
+.header{
+    display: flex;
+    height:65px;
+    background-color: black;
+    color:white;
+}
+
+.user-container{
+    display: flex;
+    flex-direction: column;
+    margin:10px;
+}
+
+.shop-container{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+.search-container{
+    width: 70%;
+    margin-left:10px;
+    padding:10px;
+    display: flex;
+}
+.cart-container{
+    margin-top: 10px;
+}
+.searchbar{
+    width:90%;
+    height: 32px;
+    margin-top: 5px;
+}
+
+.logo-container{
+    padding: 10px;
+    display: flex;
+}
+.sitename{
+    font-size: larger;
+    margin: 5px;
+    padding:5px;
+}
+.search-logo{
+margin-left:-35px;
+margin-top:5px;
+background-color: orange;
+}
