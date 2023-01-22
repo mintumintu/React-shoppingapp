@@ -1,6 +1,8 @@
 import React from "react";
 import Product from './Product'
 import './Cart.css'
+import { useSelector,useDispatch } from "react-redux";
+import { increase,decrease } from "../reduxstore/counterSlice";
 
 const Cart = ()=>{
     return(

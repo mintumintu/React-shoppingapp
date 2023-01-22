@@ -4,8 +4,10 @@ import './Header.css'
 // import SearchIcon from '@mui/icons-material/Search';
 import {MdOutlineStorefront,MdSearch, MdShoppingCart} from 'react-icons/md'
 import { Link } from 'react-router-dom'
+import { useSelector } from 'react-redux'
 
 const Header = ()=>{
+    const count= useSelector((state)=>state.counter.value);
     return (
        <div className='header'>
         <div className='logo-container'>
@@ -28,7 +30,7 @@ const Header = ()=>{
         <div className='cart-container'>
         <Link to='/cart'>
             <p style={{textDecoration:'none',color:'white'}}>Your Cart</p>
-        <MdShoppingCart size={25} color='white' /><span style={{textDecoration:'none',color:'white'}}>0</span>
+        <MdShoppingCart size={25} color='white' /><span style={{textDecoration:'none',color:'white'}}>{count}</span>
         </Link>
         </div>
        </div>

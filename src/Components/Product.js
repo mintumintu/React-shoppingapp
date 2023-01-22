@@ -1,9 +1,12 @@
 import React from "react";
 import iphoneimage from '../productimages/iphone/iphoneimageone.jpg'
 import './Product.css'
+import { useSelector,useDispatch } from "react-redux";
+import { increase,decrease } from "../reduxstore/counterSlice";
 
 const Product = (props)=>{
     const {name,rating,price,image} = props
+    const dispatch = useDispatch()
     return (
         <>
             <div className="product-container">
@@ -18,7 +21,7 @@ const Product = (props)=>{
                 </div>
                 <div className="price-addtocart">
                 <p>{price}</p>
-                <button className="addtocart">Add to Cart</button>
+                <button className="addtocart" onClick={()=>dispatch(increase())}>Add to Cart</button>
                 </div>
             </div>
         </>
