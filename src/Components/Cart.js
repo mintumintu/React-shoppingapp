@@ -16,7 +16,7 @@ const Cart = ()=>{
             <div className="subtotal">
              <p>Your total is {amount}</p>
              <p><input type='checkbox' />This item contains a gift</p>
-             <button>Checkout</button>
+             <button  className="addtocart">Checkout</button>
             </div>
             </div>
         </div>
