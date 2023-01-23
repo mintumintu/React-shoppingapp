@@ -2,9 +2,9 @@ import React from "react";
 import Product from './Product'
 import './Cart.css'
 import { useSelector,useDispatch } from "react-redux";
-import { increase,decrease } from "../reduxstore/counterSlice";
 
 const Cart = ()=>{
+    const amount = useSelector((state)=>state.total.value);
     return(
         <div className="cart-body">
             <div className="left-section">
@@ -14,7 +14,7 @@ const Cart = ()=>{
             </div>
             <div className="right-section">
             <div className="subtotal">
-             <p>Your total is 500</p>
+             <p>Your total is {amount}</p>
              <p><input type='checkbox' />This item contains a gift</p>
              <button>Checkout</button>
             </div>

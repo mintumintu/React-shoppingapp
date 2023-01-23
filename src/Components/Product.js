@@ -1,12 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 import iphoneimage from '../productimages/iphone/iphoneimageone.jpg'
 import './Product.css'
 import { useSelector,useDispatch } from "react-redux";
 import { increase,decrease } from "../reduxstore/counterSlice";
+import {add,remove} from '../reduxstore/amountSlice'
 
 const Product = (props)=>{
     const {name,rating,price,image} = props
     const dispatch = useDispatch()
+    const [isAdded,setAdded] = useState(false)
+    const [button,setButton] = useState("Add to Cart");
+
+    function handleAddToCart (){
+        if(isAdded==false){
+            setAdded(true);
+            setButton('Remove from Cart')
+            dispatch(increase())
+            dispatch(add(Number(price)))
+        }
+        else{
+            setAdded(false)
+            setButton('Add to Cart')
+            dispatch(decrease())
+            dispatch(remove(Number(price)))
+        }
+    }
     return (
         <>
             <div className="product-container">
@@ -21,7 +39,7 @@ const Product = (props)=>{
                 </div>
                 <div className="price-addtocart">
                 <p>{price}</p>
-                <button className="addtocart" onClick={()=>dispatch(increase())}>Add to Cart</button>
+                <button className="addtocart" onClick={handleAddToCart}>{button}</button>
                 </div>
             </div>
         </>
