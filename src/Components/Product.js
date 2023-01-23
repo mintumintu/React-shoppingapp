@@ -35,7 +35,7 @@ const Product = (props)=>{
                 <p>⭐⭐⭐⭐⭐</p>
                 </div>
                 <div className="product-image">
-                <img src={iphoneimage} style={{height:"20vh",width:"100%"}}/>
+                <img src={iphoneimage} style={{height:"20vh",width:"100%"}} alt='product'/>
                 </div>
                 <div className="price-addtocart">
                 <p>{price}</p>
