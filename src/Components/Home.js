@@ -47,7 +47,7 @@ const Home = ()=>{
         <>
         <div className='home-container'>
             <div className='rowimage'>
-                <img src={bannerimg} alt='image text' className='banner-image' style={{height:"60vh", width:"100%"}}/>
+                <img src={bannerimg} alt='iphone logo' className='banner-image' style={{height:"60vh", width:"100%"}}/>
             </div>
             <div className='row'>
            { ITEMS.map((item)=>
