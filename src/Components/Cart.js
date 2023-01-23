@@ -1,7 +1,7 @@
 import React from "react";
 import Product from './Product'
 import './Cart.css'
-import { useSelector,useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 
 const Cart = ()=>{
     const amount = useSelector((state)=>state.total.value);

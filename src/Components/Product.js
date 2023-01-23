@@ -1,18 +1,18 @@
 import React, { useState } from "react";
 import iphoneimage from '../productimages/iphone/iphoneimageone.jpg'
 import './Product.css'
-import { useSelector,useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import { increase,decrease } from "../reduxstore/counterSlice";
 import {add,remove} from '../reduxstore/amountSlice'
 
 const Product = (props)=>{
-    const {name,rating,price,image} = props
+    const {name,price} = props
     const dispatch = useDispatch()
     const [isAdded,setAdded] = useState(false)
     const [button,setButton] = useState("Add to Cart");
 
     function handleAddToCart (){
-        if(isAdded==false){
+        if(isAdded===false){
             setAdded(true);
             setButton('Remove from Cart')
             dispatch(increase())
