@@ -4,6 +4,7 @@ import './Product.css'
 import { useDispatch } from "react-redux";
 import { increase,decrease } from "../reduxstore/counterSlice";
 import {add,remove} from '../reduxstore/amountSlice'
+import {addProduct} from '../reduxstore/cartproductSlice'
 
 const Product = (props)=>{
     const {name,price} = props
@@ -16,7 +17,11 @@ const Product = (props)=>{
             setAdded(true);
             setButton('Remove from Cart')
             dispatch(increase())
-            dispatch(add(Number(price)))
+            dispatch(add(price))
+            dispatch(addProduct({
+                name,
+                price
+            }))
         }
         else{
             setAdded(false)

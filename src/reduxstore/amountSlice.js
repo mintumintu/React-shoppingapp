@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 export const amountSlice = createSlice({
-    name:'total',
+    name:'amount',
     initialState:{
         value:0
     },
